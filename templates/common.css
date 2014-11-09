@@ -1,0 +1,70 @@
+@font-face {
+    font-family: Inconsolata;
+    font-weight: normal;
+    src: url(/fonts/Inconsolata-Regular.ttf);
+}
+
+@font-face {
+    font-family: Inconsolata;
+    font-weight: bold;
+    src: url(/fonts/Inconsolata-Bold.ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    position: fixed;
+    top: 0;
+    bottom: 1px;
+    left: 0;
+    right: 0;
+    padding: 1em 1em 1em 3em;
+
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+/* headers */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 200;
+}
+
+h1 { font-size: 300%; }
+h2 { font-size: 250%; }
+h3 { font-size: 200%; }
+h4 { font-size: 175%; }
+h5 { font-size: 150%; }
+h6 { font-size: 125%; }
+
+/* colors */
+
+.dark-theme {
+    background: #001;
+    color: #eee;
+
+    font-family: 'Gill Sans';
+}
+
+.dark-theme h1 strong,
+.dark-theme h2 strong,
+.dark-theme h3 strong,
+.dark-theme h4 strong,
+.dark-theme h5 strong,
+.dark-theme h6 strong
+{
+    font-weight: 400;
+    color: #d28;
+}
+
+.dark-theme code {
+    font-family: Inconsolata;
+}
