@@ -5,19 +5,17 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
     <title>Code slide</title>
-    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="/templates/common.css">
     <style type="text/css">
-        .split-left,
-        .split-right { width: 49%; }
-
-        .split-left { float: left; }
-        .split-right { float: right; }
+        section.code { width: 49%; }
+        section[data-id='1'] { float: left; }
+        section[data-id='2'] { float: right; }
     </style>
 </head>
-<body class="dark-theme" ontouchend="location.pathname = '/templates/code.html'">
+<body class="dark-theme" ontouchend="location.reload()">
     <h1><strong>let</strong> keyword</h1>
 
-    <section class="code split-left">
+    <section class="code" data-id="1">
 <div class="highlight"><pre><span class="lineno">1</span> <span class="kd">function</span> <span class="nx">useVar</span><span class="p">()</span> <span class="p">{</span>
 <span class="lineno">2</span>     <span class="k">if</span> <span class="p">(</span><span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
 <span class="lineno">3</span>         <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
@@ -30,7 +28,7 @@
 </pre></div>
     </section>
 
-    <section class="code split-right">
+    <section class="code" data-id="2">
 <div class="highlight"><pre><span class="lineno"> 1</span> <span class="kd">function</span> <span class="nx">useLet</span><span class="p">()</span> <span class="p">{</span>
 <span class="lineno"> 2</span>     <span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
 <span class="lineno"> 3</span>         <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
@@ -52,9 +50,6 @@
         <li>scoped to the nearest enclosing block</li>
     </ul>
 
-    <script>
-
-    </script>
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 </html>
