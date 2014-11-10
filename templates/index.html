@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <title>Presentation</title>
+    <style type="text/css">
+        html, body { margin: 0; padding: 0; border: 0; }
+        body, iframe, .overlay { display: block; position: fixed; top: 0; left: 0; right: 0; bottom: 0; border: 0; }
+        ul { display: none; }
+    </style>
+    <script>
+        var i = -1,
+            ul,
+            iframe,
+            overlay;
+
+        function setIframe(src) {
+            if (!iframe) {
+                iframe = document.createElement("iframe");
+                iframe.width = "100%";
+                iframe.height = "100%";
+                iframe.src = src;
+                document.body.appendChild(iframe);
+
+                overlay = document.createElement("div");
+                overlay.className = "overlay";
+                overlay.onclick = nextSlide;
+                document.body.appendChild(overlay);
+            } else {
+                iframe.src = src;
+            }
+        }
+
+        function getLinks() {
+            return [].map.call(document.querySelectorAll("ul > li > a"), function (a) {
+                return a.href;
+            });
+        }
+
+        function nextSlide() {
+            i = (++i) % ul.children.length;
+            setIframe(ul.children[i].getElementsByTagName("a")[0].href);
+        }
+
+        window.onload = function () {
+            ul = document.querySelector("ul");
+            nextSlide();
+        };
+
+    </script>
+</head>
+<body>
+    <ul>
+        <li><a href="../slides/008-const.html">008-const</a></li>
+        <li><a href="../slides/010-let.html">010-let</a></li>
+    </ul>
+    <script>
+
+    </script>
+</body>
+</html>
+

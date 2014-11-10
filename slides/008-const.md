@@ -5,9 +5,9 @@
 What will happen?
 
 ```
-samples/00-const.js
+samples/010-const.js
 ```
 
-1. **Throws** exception?
-2. **Assigns** the value?
+1. **Assigns** the value?
+2. **Throws** exception?
 3. **Ignores** assignment?
