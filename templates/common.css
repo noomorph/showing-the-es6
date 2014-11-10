@@ -60,7 +60,7 @@ li:first-child { padding-top: 0; }
 
 .dark-theme {
     background: #003;
-    color: #eee;
+    color: #fff;
 
     font-family: 'Gill Sans';
 }
@@ -88,8 +88,12 @@ li:first-child { padding-top: 0; }
 .code pre { line-height: 125%; }
 
 .code .lineno {
-    padding: 0 0.75em 0 0.75em;
+    padding-left: 0.75em;
     border-right: 1px dashed gray;
+}
+
+.code .lineno+* {
+    padding-left: 0.75em;
 }
 
 .code .linenos { padding-right: 1em; }
