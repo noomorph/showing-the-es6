@@ -1,0 +1,3 @@
+[//]: # (templates/hero.html)
+
+# Incapsulation
