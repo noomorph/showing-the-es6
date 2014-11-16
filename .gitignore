@@ -32,5 +32,7 @@ node_modules
 .DS_Store
 
 # Pygments output
-samples/*.js.html
+*.js.png
+*.js.html
+
 slides/*.html
