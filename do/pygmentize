@@ -3,4 +3,5 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo Pygmentizing...
-find $DIR/../samples -name *.js -exec pygmentize -f html -O style=colorful,linenos=inline -o {}.html {} \;
+# find $DIR/../samples -name *.js -exec pygmentize -f html -O style=colorful,linenos=inline -o {}.html {} \;
+find $DIR/../samples -name *.js -exec pygmentize -O style=colorful,image_pad=25,line_number_pad=20,font_name=Consolas,line_pad=10,font_size=56 -o {}.png {} \;
