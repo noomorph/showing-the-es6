@@ -1,32 +1,11 @@
-function makeGenerator(array) {
-    function makeIterator2() {
-        var i = -1;
-
-        return {
-            next: function () {
-                i += 1;
-
-                return {
-                    value: array[i],
-                    done: i >= array.length
-                };
-            }
-        };
-    }
-
-    var it = makeIterator2();
-    it[Symbol.iterator] = makeIterator2;
-
-    return it;
+function* gen123() {
+    var i = 1;
+    yield i; // -> 1
+    i += 1;
+    yield i; // -> 2
 }
 
-var it = makeGenerator([10, 20, 30, 40, 50]),
-    step;
-
-while (!(step = it.next()).done) {
-    print(step.value);
-}
-
-for (var val of it) {
-    print(val);
-}
+g = gen123();
+g.next(); // { value: 1, done: false }
+g.next(); // { value: 2, done: false }
+g.next(); // { done: true }
