@@ -26,6 +26,5 @@ ColorPoint.prototype.toString =
     function () {
         var c = this.color;
         var base = Point$.toString;
-        var xy = base.call(this);
-        return c + ' ' + super();
+        return c + ' ' + base.call(this);
     };

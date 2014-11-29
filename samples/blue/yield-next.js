@@ -1,3 +1,5 @@
+/* jshint esnext:true */
+
 function* fibonacci() {
     let a = 0, b = 1;
 
@@ -8,7 +10,6 @@ function* fibonacci() {
     }
 }
 
-let step;
-while (!(step = fibonacci()).done) {
-    print(step.value);
+for (let number of fibonacci()) {
+    print(number);
 }
