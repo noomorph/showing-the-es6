@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/noomorph/showing-the-es6",
   "dependencies": {
-    "http-server": "^0.7.3",
+    "http-server": "^0.10.0",
     "remarkable": "^1.4.0"
   }
 }
